@@ -22,7 +22,9 @@ steps:
     uses: actions/checkout@v4
 
   - name: Install jq
-    run: sudo apt-get update && sudo apt-get install -y jq
+    run: |
+      sudo apt-get update
+      sudo apt-get install -y jq
 
   - name: Get Contributions
     run: |
@@ -40,8 +42,8 @@ steps:
 
       git add README.md
 
-      git diff --staged --quiet || (
+      if ! git diff --staged --quiet; then
         git commit -m "Update contribution count"
         git push
-      )
+      fi
 ```
