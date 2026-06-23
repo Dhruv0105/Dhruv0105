@@ -1,49 +1,57 @@
 name: Update Contributions
 
 on:
-push:
-branches:
-- main
-paths-ignore:
-- 'README.md'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
 
-workflow_dispatch:
+  workflow_dispatch:
 
 permissions:
-contents: write
+  contents: write
 
 jobs:
-update:
-runs-on: ubuntu-latest
+  update:
+    runs-on: ubuntu-latest
 
-```
-steps:
-  - name: Checkout Repository
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-  - name: Install jq
-    run: |
-      sudo apt-get update
-      sudo apt-get install -y jq
+      - name: Install jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
 
-  - name: Get Contributions
-    run: |
-      CONTRIBUTIONS=$(curl -s https://github-contributions-api.jogruber.de/v4/Dhruv0105 | jq '.total.contributions')
-      echo "CONTRIBUTIONS=$CONTRIBUTIONS" >> $GITHUB_ENV
+      - name: Get Contributions
+        run: |
+          CONTRIBUTIONS=$(curl -s https://github-contributions-api.jogruber.de/v4/Dhruv0105 | jq '.total.contributions')
+          echo "CONTRIBUTIONS=$CONTRIBUTIONS" >> $GITHUB_ENV
 
-  - name: Update README
-    run: |
-      sed -i "s/<!-- CONTRIBUTIONS_START -->.*<!-- CONTRIBUTIONS_END -->/<!-- CONTRIBUTIONS_START -->${CONTRIBUTIONS}<!-- CONTRIBUTIONS_END -->/" README.md
+      - name: Update README
+        run: |
+          sed -i "s/<!-- CONTRIBUTIONS_START -->.*<!-- CONTRIBUTIONS_END -->/<!-- CONTRIBUTIONS_START -->${CONTRIBUTIONS}<!-- CONTRIBUTIONS_END -->/" README.md
 
-  - name: Commit Changes
-    run: |
-      git config user.name "github-actions"
-      git config user.email "github-actions@github.com"
+      - name: Commit Changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
 
-      git add README.md
+          git add README.md
 
-      if ! git diff --staged --quiet; then
-        git commit -m "Update contribution count"
-        git push
-      fi
-```
+          if ! git diff --staged --quiet; then
+            git commit -m "Update contribution count"
+            git push
+          fi
+:::
+
+### Verify before committing
+
+The file should:
+
+- Start with:
+
+```text
+name: Update Contributions
