@@ -1,9 +1,9 @@
 name: Update Contributions
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'
   workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
 
 permissions:
   contents: write
@@ -13,42 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Get contribution count
-        id: contrib
-        uses: octokit/graphql-action@v2
-        with:
-          query: |
-            query {
-              user(login: "Dhruv0105") {
-                contributionsCollection {
-                  contributionCalendar {
-                    totalContributions
-                  }
-                }
-              }
-            }
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get Contributions
+        run: |
+          CONTRIBUTIONS=$(curl -s https://github-contributions-api.jogruber.de/v4/Dhruv0105 | jq '.total.contributions')
+          echo "CONTRIBUTIONS=$CONTRIBUTIONS" >> $GITHUB_ENV
 
       - name: Update README
         run: |
-          sudo apt-get update
-          sudo apt-get install -y jq
+          sed -i "s/<!-- CONTRIBUTIONS_START -->.*<!-- CONTRIBUTIONS_END -->/<!-- CONTRIBUTIONS_START -->${CONTRIBUTIONS}<!-- CONTRIBUTIONS_END -->/" README.md
 
-          COUNT=$(echo '${{ steps.contrib.outputs.data }}' | jq '.user.contributionsCollection.contributionCalendar.totalContributions')
-
-          perl -0777 -i -pe 's/<!-- CONTRIBUTIONS_START -->.*<!-- CONTRIBUTIONS_END -->/<!-- CONTRIBUTIONS_START -->'"$COUNT"'<!-- CONTRIBUTIONS_END -->/s' README.md
-
-      - name: Commit changes
+      - name: Commit Changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
 
           git add README.md
 
-          if ! git diff --cached --quiet; then
+          git diff --staged --quiet || (
             git commit -m "Update contribution count"
             git push
-          fi
+          )
