@@ -75,7 +75,7 @@ I enjoy combining AI, automation, and software engineering to build practical so
 
 ### Total Contributions This Year
 
-<!-- CONTRIBUTIONS_START -->0<!-- CONTRIBUTIONS_END -->
+<!-- CONTRIBUTIONS_START -->null<!-- CONTRIBUTIONS_END -->
 
 </p>
 
