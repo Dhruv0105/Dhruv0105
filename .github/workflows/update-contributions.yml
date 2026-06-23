@@ -1,38 +1,47 @@
 name: Update Contributions
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 */6 * * *"
+push:
+branches:
+- main
+paths-ignore:
+- 'README.md'
+
+workflow_dispatch:
 
 permissions:
-  contents: write
+contents: write
 
 jobs:
-  update:
-    runs-on: ubuntu-latest
+update:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+```
+steps:
+  - name: Checkout Repository
+    uses: actions/checkout@v4
 
-      - name: Get Contributions
-        run: |
-          CONTRIBUTIONS=$(curl -s https://github-contributions-api.jogruber.de/v4/Dhruv0105 | jq '.total.contributions')
-          echo "CONTRIBUTIONS=$CONTRIBUTIONS" >> $GITHUB_ENV
+  - name: Install jq
+    run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Update README
-        run: |
-          sed -i "s/<!-- CONTRIBUTIONS_START -->.*<!-- CONTRIBUTIONS_END -->/<!-- CONTRIBUTIONS_START -->${CONTRIBUTIONS}<!-- CONTRIBUTIONS_END -->/" README.md
+  - name: Get Contributions
+    run: |
+      CONTRIBUTIONS=$(curl -s https://github-contributions-api.jogruber.de/v4/Dhruv0105 | jq '.total.contributions')
+      echo "CONTRIBUTIONS=$CONTRIBUTIONS" >> $GITHUB_ENV
 
-      - name: Commit Changes
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+  - name: Update README
+    run: |
+      sed -i "s/<!-- CONTRIBUTIONS_START -->.*<!-- CONTRIBUTIONS_END -->/<!-- CONTRIBUTIONS_START -->${CONTRIBUTIONS}<!-- CONTRIBUTIONS_END -->/" README.md
 
-          git add README.md
+  - name: Commit Changes
+    run: |
+      git config user.name "github-actions"
+      git config user.email "github-actions@github.com"
 
-          git diff --staged --quiet || (
-            git commit -m "Update contribution count"
-            git push
-          )
+      git add README.md
+
+      git diff --staged --quiet || (
+        git commit -m "Update contribution count"
+        git push
+      )
+```
