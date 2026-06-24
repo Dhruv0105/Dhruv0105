@@ -57,17 +57,19 @@ I love combining AI, automation, and software engineering to solve real-world pr
   <a href="https://linkedin.com/in/dhruv-singh-46b7a9334">
     <img src="https://skillicons.dev/icons?i=linkedin" height="50" />
   </a>
+
   <a href="mailto:hello.dhruv05@gmail.com">
     <img src="https://skillicons.dev/icons?i=gmail" height="50" />
   </a>
+
   <a href="https://instagram.com/dhruvvvv_me">
     <img src="https://skillicons.dev/icons?i=instagram" height="50" />
   </a>
-  <a href="https://leetcode.com/u/Dhruv0105/">
-  <img src="https://skillicons.dev/icons?i=leetcode" height="50" />
-</a>
-</p>
 
+  <a href="https://leetcode.com/u/Dhruv0105/">
+    <img src="https://assets.leetcode.com/static_assets/public/icons/favicon-32x32.png" height="50" />
+  </a>
+</p>
 ---
 
 ## 🛠️ Tech Stack
