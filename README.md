@@ -67,8 +67,10 @@ I love combining AI, automation, and software engineering to solve real-world pr
   </a>
 
   <a href="https://leetcode.com/u/Dhruv0105/">
-  <img src="https://assets.leetcode.com/static_assets/public/icons/favicon-50x50.png" height="100" />
-</a>
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg"
+         height="42"
+         style="vertical-align:middle;" />
+  </a>
 </p>
 ---
 
