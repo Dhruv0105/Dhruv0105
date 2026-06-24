@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm Dhruv Singh</h1>
-<h3 align="center">Full-Stack Developer • AI Enthusiast • CSE Student</h3>
+<h1 align="center"> Dhruv Singh</h1>
+<h3 align="center">Mern-Stack Developer • AI Enthusiast • CSE Student</h3>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Dhruv0105&label=Profile%20Views&color=0e75b6&style=flat" alt="profile views" />
@@ -24,13 +24,13 @@
 🔭 Currently Working On
 
 * AI-Powered Applications
-* Full-Stack Web Projects
+* Mern-Stack Web Projects
 * Automation Workflows using n8n & Ollama
 * Open Source Contributions
 
 👯 Open To Collaborate On
 
-* Full-Stack Projects
+* Mern-Stack Projects
 * AI / ML Projects
 * Open Source Projects
 
@@ -69,24 +69,13 @@ I enjoy combining AI, automation, and software engineering to build practical so
 
 ---
 
-# 📊 Contributions
-
-<p align="center">
-
-### Total Contributions This Year
-
-<!-- CONTRIBUTIONS_START -->null<!-- CONTRIBUTIONS_END -->
-
-</p>
-
----
 
 # 🛠️ Tech Stack
 
 ### Languages
 
 <p>
-<img src="https://skillicons.dev/icons?i=c,cpp,java,js,python,mysql" />
+<img src="https://skillicons.dev/icons?i=c,cpp,java,js,python,mysql,R" />
 </p>
 
 ### Frontend
@@ -110,7 +99,7 @@ I enjoy combining AI, automation, and software engineering to build practical so
 ### Tools & Platforms
 
 <p>
-<img src="https://skillicons.dev/icons?i=git,github,docker,linux,vscode,vercel,postman" />
+<img src="https://skillicons.dev/icons?i=git,github,docker,linux,render,vercel,postman" />
 </p>
 
 ### AI / ML
