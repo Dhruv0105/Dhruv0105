@@ -60,9 +60,12 @@ I love combining AI, automation, and software engineering to solve real-world pr
   <a href="mailto:hello.dhruv05@gmail.com">
     <img src="https://skillicons.dev/icons?i=gmail" height="50" />
   </a>
-  <a href="https://instagram.com/dhruv_me01">
+  <a href="https://instagram.com/dhruvvvv_me">
     <img src="https://skillicons.dev/icons?i=instagram" height="50" />
   </a>
+  <a href="https://leetcode.com/u/Dhruv0105/">
+  <img src="https://skillicons.dev/icons?i=leetcode" height="50" />
+</a>
 </p>
 
 ---
