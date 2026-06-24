@@ -132,6 +132,9 @@ I enjoy combining AI, automation, and software engineering to build practical so
 <img src="https://github-readme-streak-stats.herokuapp.com?user=Dhruv0105&theme=tokyonight" />
 </p>
 
+## GitHub Stats
+
+Total Contributions: CONTRIBUTIONS_PLACEHOLDER
 ---
 
 # 📈 Contribution Graph
