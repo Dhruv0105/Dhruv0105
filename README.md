@@ -134,7 +134,7 @@ I enjoy combining AI, automation, and software engineering to build practical so
 
 ## GitHub Stats
 
-Total Contributions: CONTRIBUTIONS_PLACEHOLDER
+Total Contributions: 100
 ---
 
 # 📈 Contribution Graph
