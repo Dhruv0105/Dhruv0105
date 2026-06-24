@@ -1,12 +1,6 @@
 name: Update Contributions
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - README.md
-
   workflow_dispatch:
 
 permissions:
@@ -17,24 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install jq
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y jq
+        run: sudo apt-get install -y jq
 
       - name: Get Contributions
         run: |
-          CONTRIBUTIONS=$(curl -s https://github-contributions-api.jogruber.de/v4/Dhruv0105 | jq '.total.contributions')
+          CONTRIBUTIONS=$(curl -s "https://github-contributions-api.deno.dev/Dhruv0105.json" | jq '.contributions')
           echo "CONTRIBUTIONS=$CONTRIBUTIONS" >> $GITHUB_ENV
 
       - name: Update README
         run: |
-          sed -i "s/<!-- CONTRIBUTIONS_START -->.*<!-- CONTRIBUTIONS_END -->/<!-- CONTRIBUTIONS_START -->${CONTRIBUTIONS}<!-- CONTRIBUTIONS_END -->/" README.md
+          sed -i "s/TOTAL_CONTRIBUTIONS:.*/TOTAL_CONTRIBUTIONS: $CONTRIBUTIONS/" README.md
 
-      - name: Commit Changes
+      - name: Commit
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
@@ -45,13 +37,3 @@ jobs:
             git commit -m "Update contribution count"
             git push
           fi
-:::
-
-### Verify before committing
-
-The file should:
-
-- Start with:
-
-```text
-name: Update Contributions
