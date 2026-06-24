@@ -68,7 +68,7 @@ I love combining AI, automation, and software engineering to solve real-world pr
 
   <a href="https://leetcode.com/u/Dhruv0105/">
   <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
-       height="55" />
+       height="52" />
   </a>
 </p>
 ---
