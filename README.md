@@ -107,30 +107,11 @@ I love combining AI, automation, and software engineering to solve real-world pr
 
 ---
 
-## 📈 GitHub Stats
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Dhruv0105&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
-</p>
-
-<p align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dhruv0105&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
-
----
 
 ## 📊 Contribution Graph
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dhruv0105&theme=tokyo-night&hide_border=true" />
-</p>
-
----
-
-## 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Dhruv0105&theme=tokyonight&no-frame=true&margin-w=15&margin-h=15" />
 </p>
 
 ---
