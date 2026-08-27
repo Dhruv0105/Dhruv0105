@@ -116,8 +116,10 @@ I love combining AI, automation, and software engineering to solve real-world pr
 
 ## 📊 Contribution Graph
 
+<h2>📊 Contribution Graph</h2>
+
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dhruv0105&theme=tokyonight" />
+  <img src="https://ghchart.rshah.org/Dhruv0105" />
 </p>
 ---
 
