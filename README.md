@@ -118,6 +118,12 @@ I love combining AI, automation, and software engineering to solve real-world pr
 
 <h2>📊 Contribution Graph</h2>
 
+<h2>📊 Contribution Graph</h2>
+
+<p align="center">
+  <img src="https://ghchart.rshah.org/Dhruv0105" />
+</p>
+
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Dhruv0105&show_icons=true&theme=tokyonight" />
 </p>
