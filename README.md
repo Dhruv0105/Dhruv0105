@@ -117,7 +117,7 @@ I love combining AI, automation, and software engineering to solve real-world pr
 ## 📊 Contribution Graph
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dhruv0105&theme=react-dark&hide_border=true&area=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Dhruv0105&theme=github-dark&hide_border=true" />
 </p>
 ---
 
